@@ -22,7 +22,7 @@ const Hero = () => {
               variants={container(0)}
               initial='hidden'
               animate='visible'
-              className='pb-16 text-3x1 font-bold tracking-tight lg:mt-16 lg:text-5x1'>
+              className='pb-16 text-3xl font-bold tracking-tight lg:mt-16 lg:text-5xl'>
               Reyhan Fauzan Nugroho, S.Kom
             </motion.h1>
             <motion.span
@@ -33,16 +33,28 @@ const Hero = () => {
             text-3x1 tracking-tight text-transparant'>
               Teacher & IT Enthusiast
             </motion.span>
+
             <motion.p
-            variants={container(0.5)}
-            initial='hidden'
-            animate='visible'
-            className="my-2 max-w-xl py-6 font-light tracking tighter"
-            >
+              variants={container(0.5)}
+              initial='hidden'
+              animate='visible'
+              className='my-2 max-w-xl py-6 font-light tracking tighter'>
               {HERO_CONTENT}
             </motion.p>
           </div>
         </div>
+        <div className='w-full lg:w-1/2 lg:p-8'>
+          <div className='flex justify-center'>
+            <motion.img
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delayl: 1.2 }}
+              className='rounded-2xl'
+              src={profilePic}
+              alt='Reyhan Fauzan Nugroho, S.Kom'
+            />
+          </div>
+        </div>  
       </div>
     </div>
   );
